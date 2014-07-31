@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A2F1B11198A8473003B2472 /* HMACAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2F1B10198A8473003B2472 /* HMACAlgorithm.swift */; };
+		1A2F1B12198A851A003B2472 /* HMACAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2F1B10198A8473003B2472 /* HMACAlgorithm.swift */; };
 		1A8E881D1986A216004221AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8E881C1986A216004221AD /* AppDelegate.swift */; };
 		1A8E881F1986A216004221AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8E881E1986A216004221AD /* ViewController.swift */; };
 		1A8E88221986A216004221AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A8E88201986A216004221AD /* Main.storyboard */; };
 		1A8E88241986A216004221AD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A8E88231986A216004221AD /* Images.xcassets */; };
 		1A8E88301986A216004221AD /* backbeamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8E882F1986A216004221AD /* backbeamTests.swift */; };
+		1A8E883A1986A277004221AD /* BBBackbeamRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8E88391986A277004221AD /* BBBackbeamRequest.swift */; };
+		1AAF5D82198A30980064C1AF /* BBBackbeamRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8E88391986A277004221AD /* BBBackbeamRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A2F1B10198A8473003B2472 /* HMACAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMACAlgorithm.swift; sourceTree = "<group>"; };
+		1A2F1B13198A8A4B003B2472 /* backbeamTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "backbeamTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		1A8E88171986A216004221AD /* backbeam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = backbeam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A8E881B1986A216004221AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A8E881C1986A216004221AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +40,9 @@
 		1A8E88291986A216004221AD /* backbeamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = backbeamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A8E882E1986A216004221AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A8E882F1986A216004221AD /* backbeamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backbeamTests.swift; sourceTree = "<group>"; };
+		1A8E88391986A277004221AD /* BBBackbeamRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBBackbeamRequest.swift; sourceTree = "<group>"; };
+		1A8E886A19874D81004221AD /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		1AAF5D83198A81380064C1AF /* backbeam-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "backbeam-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +63,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A2F1B17198A8AA8003B2472 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1A8E88391986A277004221AD /* BBBackbeamRequest.swift */,
+				1A2F1B10198A8473003B2472 /* HMACAlgorithm.swift */,
+			);
+			name = Classes;
+			path = backbeam;
+			sourceTree = "<group>";
+		};
 		1A8E880E1986A216004221AD = {
 			isa = PBXGroup;
 			children = (
+				1A2F1B17198A8AA8003B2472 /* Classes */,
 				1A8E88191986A216004221AD /* backbeam */,
 				1A8E882C1986A216004221AD /* backbeamTests */,
 				1A8E88181986A216004221AD /* Products */,
@@ -79,7 +99,9 @@
 				1A8E881E1986A216004221AD /* ViewController.swift */,
 				1A8E88201986A216004221AD /* Main.storyboard */,
 				1A8E88231986A216004221AD /* Images.xcassets */,
+				1AAF5D83198A81380064C1AF /* backbeam-Bridging-Header.h */,
 				1A8E881A1986A216004221AD /* Supporting Files */,
+				1A8E886A19874D81004221AD /* MyPlayground.playground */,
 			);
 			path = backbeam;
 			sourceTree = "<group>";
@@ -96,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				1A8E882F1986A216004221AD /* backbeamTests.swift */,
+				1A2F1B13198A8A4B003B2472 /* backbeamTests-Bridging-Header.h */,
 				1A8E882D1986A216004221AD /* Supporting Files */,
 			);
 			path = backbeamTests;
@@ -209,6 +232,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A8E881F1986A216004221AD /* ViewController.swift in Sources */,
+				1A8E883A1986A277004221AD /* BBBackbeamRequest.swift in Sources */,
+				1A2F1B11198A8473003B2472 /* HMACAlgorithm.swift in Sources */,
 				1A8E881D1986A216004221AD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,7 +242,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A2F1B12198A851A003B2472 /* HMACAlgorithm.swift in Sources */,
 				1A8E88301986A216004221AD /* backbeamTests.swift in Sources */,
+				1AAF5D82198A30980064C1AF /* BBBackbeamRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,9 +352,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = backbeam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "backbeam/backbeam-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -336,9 +366,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = backbeam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "backbeam/backbeam-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -346,6 +378,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/backbeam.app/backbeam";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -357,6 +390,8 @@
 				INFOPLIST_FILE = backbeamTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "backbeamTests/backbeamTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
@@ -365,6 +400,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/backbeam.app/backbeam";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -372,6 +408,7 @@
 				INFOPLIST_FILE = backbeamTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "backbeamTests/backbeamTests-Bridging-Header.h";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;
@@ -395,6 +432,7 @@
 				1A8E88351986A216004221AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1A8E88361986A216004221AD /* Build configuration list for PBXNativeTarget "backbeamTests" */ = {
 			isa = XCConfigurationList;
@@ -403,6 +441,7 @@
 				1A8E88381986A216004221AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
