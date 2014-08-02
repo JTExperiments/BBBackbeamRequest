@@ -16,18 +16,19 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        request.secret = "pro_d2483cadbe4018c2603d9ba8993663f42134ed455e5e7ffdb7c8573218d323b3cfe7d50d1c6a371f"
-        request.key = "pro_3ae5e79bb30c58501b88d81e7bb23ae6440aef2a"
-        request.method = "POST"
+        request.secret = // replace with your secret
+        request.key = // replace with your key
+        request.method = "GET"
         request.nonce = "6303cd9bf27d27eb6343427ac42365b38b09f112"
-        request.path = "/user/email/login"
+        request.path = "/data/user"
         request.time = "1397166331409"
-        request.param["email"] = "user@example.com"
-        request.param["password"] = "foobarbaz"
+        request.env = "dev"
+        request.project = // replace with your project
+        request.optionals["limit"] = 1
 
-        println("canonicalArray \(request.canonical())")
-        println("request.secret \(request.secret)")
-        println("request.signature \(request.signature())")
+        request.send { (data, response, error) in
+            println("data \(data), response \(response), error \(error)")
+        }
     }
 
     override func didReceiveMemoryWarning() {
