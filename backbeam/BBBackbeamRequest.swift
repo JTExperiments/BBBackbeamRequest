@@ -49,6 +49,25 @@ class BBBackbeamRequest: NSObject {
         return ["key", "method", "nonce", "path", "time"]
     }
 
+    func query() -> String {
+        var keys : [AnyObject] = ["key", "nonce",  "time"]
+        var params = Dictionary<String, AnyObject>()
+
+        for (key, value) in self.dictionaryWithValuesForKeys(keys) {
+            params.updateValue(value, forKey: key as String)
+        }
+        for (key, value) in self.optionals {
+            params.updateValue(value, forKey: key)
+        }
+
+        var array = sorted(params.keys, <)
+
+        var mapped = array.map {
+            "\($0)=\(params[$0]!)"
+        }
+
+        return join("&", mapped);
+    }
 
     func send(completion:((NSData!, NSURLResponse!, NSError!) -> Void)!) -> Void {
 
@@ -56,7 +75,7 @@ class BBBackbeamRequest: NSObject {
 
         let component = NSURLComponents(string: base)
         component.path = path!
-        component.query = canonical() + "&signature=\(signature())"
+        component.query = query() + "&signature=\(signature())"
 
         let url = component.URL
 

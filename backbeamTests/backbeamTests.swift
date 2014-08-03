@@ -24,8 +24,8 @@ class backbeamTests: XCTestCase {
         request.nonce = "6303cd9bf27d27eb6343427ac42365b38b09f112"
         request.path = "/user/email/login"
         request.time = "1397166331409"
-        request.param["email"] = "user@example.com"
-        request.param["password"] = "foobarbaz"
+        request.optionals["email"] = "user@example.com"
+        request.optionals["password"] = "foobarbaz"
     }
 
     override func tearDown() {
@@ -35,6 +35,10 @@ class backbeamTests: XCTestCase {
 
     func testCanonicalString() {
         XCTAssertEqual(request.canonical(), "email=user@example.com&key=pro_3ae5e79bb30c58501b88d81e7bb23ae6440aef2a&method=POST&nonce=6303cd9bf27d27eb6343427ac42365b38b09f112&password=foobarbaz&path=/user/email/login&time=1397166331409", "Must be same")
+    }
+
+    func testQueryString() {
+        XCTAssertEqual(request.query(), "email=user@example.com&key=pro_3ae5e79bb30c58501b88d81e7bb23ae6440aef2a&nonce=6303cd9bf27d27eb6343427ac42365b38b09f112&password=foobarbaz&time=1397166331409", "Must be same")
     }
 
     func testSignature() {
